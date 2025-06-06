@@ -1,48 +1,47 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+# n8n-nodes-alttextify-net
 
-# n8n-nodes-starter
+![AltTextify N8N logo](https://cdn1.alttextify.net/assets/img/alttextify-n8n.png)
 
-This repo contains example nodes to help you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
+[![npm version](https://badge.fury.io/js/n8n-nodes-alttextify-net.svg)](https://badge.fury.io/js/n8n-nodes-alttextify-net)
 
-To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
+n8n node for creating AI based alt text in 140+ languages. [AltTextify](https://alttextify.net?utm_source=n8n) uses state of the art AI models and computer vision / "image to text" to generate accurate, descriptive alt text that enhances ADA compliance, improves search engine rankings, and saves you hours of manual work.
 
-If you would like your node to be available on n8n cloud you can also [submit your node for verification](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/).
+## Operations
 
-## Prerequisites
+Generate Alt Text the operation is supported by your node
 
-You need the following installed on your development machine:
+## How to use
 
-* [git](https://git-scm.com/downloads)
-* Node.js and npm. Minimum version Node 20. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  npm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+### Community Nodes (Recommended)
 
-## Using this starter
+1. Go to Settings > Community Nodes.
+2. Select Install.
+3. Enter `n8n-nodes-alttextify-net` in *Enter npm package name.* field.
+4. Agree to the risks of using community nodes: select I understand the risks of installing unverified code from a public source.
+5. Select Install.
 
-These are the basic steps for working with the starter. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+### Manual installation
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
-2. Clone your new repo:
-   ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
-   ```
-3. Run `npm i` to install dependencies.
-4. Open the project in your editor.
-5. Browse the examples in `/nodes` and `/credentials`. Modify the examples, or replace them with your own nodes.
-6. Update the `package.json` to match your details.
-7. Run `npm run lint` to check for errors or `npm run lintfix` to automatically fix errors when possible.
-8. Test your node locally. Refer to [Run your node locally](https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/) for guidance.
-9. Replace this README with documentation for your node. Use the [README_TEMPLATE](README_TEMPLATE.md) to get started.
-10. Update the LICENSE file to use your details.
-11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
+To get started install the package in your n8n root directory:
 
-## More information
+`npm install n8n-nodes-alttextify-net`
 
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+### Setup
 
-## License
+1. Go to Credentials.
+2. Select `Add Credential` button.
+3. Select `AltTextify API` from the *Search for app* dropdown.
+4. Get your AltTextify API key from [API Getting Started](https://alttextify.net/settings/apikeys).
+5. Enter your AltTextify API key in the *API Key* field.
 
-[MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+## API Reference
+
+- [AltTextify API](https://apidoc.alttextify.net)
+
+## Contributing
+
+1. Fork it (<https://github.com/thetawavetechnologies/n8n-nodes-alttextify-net/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -m 'feat(fooBar) Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
