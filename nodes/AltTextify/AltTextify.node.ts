@@ -10,17 +10,17 @@ import { NodeConnectionType } from 'n8n-workflow';
 export class AltTextify implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'AltTextify',
-		name: 'AltTextify',
+		name: 'altTextify',
 		icon: { light: 'file:alttextify.svg', dark: 'file:alttextify.svg' },
 		group: ['transform'],
 		version: 1,
 		description: 'Generate alt text using AltTextify API',
-		defaults: { name: 'AltTextify' },
+		defaults: { name: 'altTextify' },
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
-				name: 'AltTextifyApi',
+				name: 'altTextifyApi',
 				required: true,
 			},
 		],
@@ -87,7 +87,7 @@ export class AltTextify implements INodeType {
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const items = this.getInputData();
 		const returnData: INodeExecutionData[] = [];
-		const credentials = await this.getCredentials('AltTextifyApi');
+		const credentials = await this.getCredentials('altTextifyApi');
 		const length = items.length;
 
 		for (let i = 0; i < length; i++) {
